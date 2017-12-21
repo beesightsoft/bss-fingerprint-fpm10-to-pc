@@ -135,7 +135,7 @@ class Image(Finger):
             self.check_ok(ret[0])
             sys.stderr.write("Downloading: ")
 
-            count = 288 * (256 / packet_size)
+            count = int(288 * (256 / packet_size))
             for i in range(count):
                 if i != count - 1:
                     data = self.com.read_packet(11 + packet_size // 2, StatusCodes.PacketType.Data.value)
