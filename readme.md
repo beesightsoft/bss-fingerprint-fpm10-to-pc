@@ -3,7 +3,7 @@
 Tested with FMP10A sensor on Linux (ubuntu 16.04 LTS, kernel 4.10.0-42-generic) and MAC (MacBook Pro Mid 2015 max-options macOS High Sierra 10.13.2).
 
 ### Preparing
-- Module fingerprint FMP10 (ZFM-20)
+- Module fingerprint FMP10 (ZFM-20) http://artofcircuits.com/product/fpm10a
 - TTL to USB module. I use USB UART CP2102. Install driver from here: https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
 Linux:
 	+ Download from link above for linux
