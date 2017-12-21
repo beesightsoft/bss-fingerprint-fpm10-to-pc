@@ -28,7 +28,7 @@ Fix: You can disable Secure Boot (UEFI) in the BIOS with the following steps:
 
 - Connect pin:
 ```
-Sensor			USB.UART
+Sensor				USB.UART
 5v		<->		5v
 GND		<->		GND
 TX		<->		RX
@@ -36,17 +36,23 @@ RX		<->		TX
 ```
 
 ### Requirements
+```
 python3
 pip3
 pillow
 pyserial
+```
 
 On both:
+```
 sudo pip install pillow
 sudo pip install pyserial
+```
 
 On linux:
+```
 sudo apt-get install python-serial python3-serial
+```
 
 On MAC:
 Install python3 & pip3:
@@ -67,16 +73,22 @@ ModuleNotFoundError: No module named 'PIL'
 sudo pip3 install image
 ```
 Install serial
+```
 sudo pip3 install pyserial
+```
 
 ----------------------
 ### Check port usb ttl
 Linux:
-$ dmesg | grep tty
+```
+dmesg | grep tty
+```
 => Use port:  /dev/ttyUSB0
 
 MAC:
+```
 ls /dev/cu.*
+```
 => Use port: /dev/cu.SLAB_USBtoUART
 
 **HELP**
@@ -84,25 +96,23 @@ ls /dev/cu.*
 
 To take image to buffer on sensor:
 `python3 main.py -p USBTTL_PORT --model-generate`
-
 Ex:
 `python3 main.py -p /dev/cu.SLAB_USBtoUART --model-generate`
 
 To download image from sensor to pc:
 `python3 main.py -p USBTTL_PORT --image-upload t.bmp`
-
 Ex:
 `python3 main.py -p /dev/cu.SLAB_USBtoUART --image-upload t.bmp`
 
 ### Estimate
 Transfer image to pc around ~7.5 - 8 seconds
-Demo video
-![Preview](demo.mp4)
+![Demo video](./assets/demo.mp4)
 
 
 Ref: 
-
+```
 https://github.com/OLIMEX/FingerPrint
 https://github.com/brianrho/FPM
 https://github.com/bastianraschke/pyfingerprint
 https://github.com/adafruit/Adafruit-Fingerprint-Sensor-Library
+```
