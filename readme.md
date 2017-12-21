@@ -96,11 +96,13 @@ ls /dev/cu.*
 
 To take image to buffer on sensor:
 `python3 main.py -p USBTTL_PORT --model-generate`
+
 Ex:
 `python3 main.py -p /dev/cu.SLAB_USBtoUART --model-generate`
 
 To download image from sensor to pc:
 `python3 main.py -p USBTTL_PORT --image-upload t.bmp`
+
 Ex:
 `python3 main.py -p /dev/cu.SLAB_USBtoUART --image-upload t.bmp`
 
